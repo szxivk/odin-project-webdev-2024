@@ -5,27 +5,22 @@
 - https://cs50.dev/
 - https://manual.cs50.io/#cs50.h
 - https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/assignments
-- https://www.w3schools.com/cpp/default.asp
 - https://dev.to/narottam04/step-by-step-guide-how-to-set-up-visual-studio-code-for-c-and-c-programming-2021-1f0i
 - https://sourceforge.net/projects/mingw/
+- https://www.theodinproject.com/paths/foundations/courses/foundations
 
 
+## How to run .c files in windows
 
-
-## Before you start
-
-#### for c++ compile in windows use
-```shell
-g++ filename.cpp -o filename
-```
-#### and for c use
+#### to compile c use in win use
 ```shell
 gcc filename.c -o filename
 ```
 
-#### to run on win use
+#### to run it use
 ```shell
 ./filename
 ```
 
+- 18 Sept 2024 - Decided to drop C++ and do The odin project's web dev foundation course and dedicate 13hrs/week.
 
