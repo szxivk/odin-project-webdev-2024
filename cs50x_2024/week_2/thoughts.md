@@ -23,4 +23,36 @@
  ```c
  float avg(int length, int array[]);
  ```
- - watch from 1:14:00 of lecture 2
+ - string is just an array of characters and can be manipulated like an array.
+    - but how do we set its size?
+        - at the end of a string eg `string s = "HI!"`, if `s[2] = '!'`, there is hidden `s[3]` value , a sentinal value at the end which is automatically set to `00000000` -> single byte 0 or 8 0 bit (technically a char-based representation of a 0 -> `\0` or known as `NUL`), which tells the computer the string stops here.
+        - 8 0 bits is NUL in ASCII
+    - therefore, a string is n+1 bytes , n being number of characters in the string. 1 extra byte for the zero value.
+- string can also be stored in arrays and they act like 2D arrays (meaning you can even access the characters inside the strings inside the array). 
+    - syntax:
+    ```c
+    string words[2];
+    words[0]="HI!";
+    words[1]="BYE!";
+    ```
+# Making Code that take commandline arguements.
+
+- syntax:
+    ```c
+    // we were using int main(void)
+    int main (int argc, string argv[]){
+        ...
+    }
+    ```
+
+- argc & argv stands for argument count (how many words did the human type at the prompt) & argument vector (vector is generally another term for an array -> a list of values or in this case, commandline arguments)
+    - check out status.c in code_along folder of week_2
+
+## Exit statuses
+
+- check out status.c in code_along folder of week_2
+
+# Cryptography
+
+- encryption: scrambling info so that only you and the recipient can receive it
+    - plaintext + key --> cipher (encrypting algorithm) --> ciphertext

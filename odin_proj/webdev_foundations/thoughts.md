@@ -34,5 +34,41 @@
   - `*` matches zero or more characters in a filename, so *.txt matches all files ending in .txt.
   - `?` matches any single character in a filename, so `?.txt` matches "a.txt" but not "any.txt".
 
-- 
+## Git Basics
+- a distributed version control system (free, open-source, super-fast, scalable, and cheap branching/merging)
+- Git is like a really epic save button for your files and directories.
+- Git thinks about its data more like a stream of snapshots. Storing data as snapshots of the project over time
+- With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot.
+- Git has three main states that your files can reside in: modified, staged, and committed:
+  - Modified means that you have changed the file but have not committed it to your database yet.
+  - Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+  - Committed means that the data is safely stored in your local database.
+  - The basic Git workflow goes something like this:
+    1. You modify files in your working tree.
+    2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+    3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+  - The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
+  - The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
+  - The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.
+  - [Learn basics of Git](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter)
+  - GitHub is a cloud-based platform where you can store, share, and work together with others to write code.
+    - Once you start to collaborate with others and all need to work on the same repository at the same time, you’ll continually:
+      - Pull all the latest changes made by your collaborators from the remote repository on GitHub.
+      - Push back your own changes to the same remote repository on GitHub.
+  - Git figures out how to intelligently merge this flow of changes, and GitHub helps you manage the flow through features such as "pull requests."
+  - [Learn basics of GitHub](https://docs.github.com/en/get-started/start-your-journey).
+  - [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf).
+  - Git best practices:
+    -  atomic commit: is a commit that includes changes related to only one feature or task of your program. There are two main reasons for doing this: first, if something you change turns out to cause some problems, it is easy to revert the specific change without losing other changes; and second, it enables you to write better commit message
+  - Note for future: need to watch a video on how git works , how it saves files (its 2 stage system)
 
+  ## HTML Foundations
+
+  - HTML and CSS:
+    - HTML is the raw data that a webpage is built out of. All the text, links, cards, lists, and buttons are created in HTML. CSS is what adds style to those plain elements. HTML puts information on a webpage, and CSS positions that information, gives it color, changes the font, and makes it look great!
+    -  they are only concerned with presenting information. They are not used to program any logic. JavaScript is a programming language and it’s used to make webpages do things.
+  - HTML markups are enhanced by CSS and JavaScript, which is why it’s recommended that you learn this programming language first. it allows you as a website owner to create the basic structure of you website
+  - While CSS is a static programming language, it can be used to make your website appear visually pleasing and modern.
+    - Along with the presentation of HTML, CSS can also be used to alter the layout and formatting of your website.
+  - While HTML provides the structure for a website and CSS allows you to control the presentation of a site, the JavaScript programming language gives you the tools that you need to alter the behavior of different elements that are found on a website page.
+  
