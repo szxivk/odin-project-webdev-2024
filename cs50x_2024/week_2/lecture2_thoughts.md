@@ -14,6 +14,10 @@
     scores[0] = 72; // means go into this array at location ("index") 0 & put value 72 there -> assignment
     scores[1] = 73;
     scores[2] = 33;
+
+    // or
+
+    int scores[3] = {72, 73, 33};
     ```
 - an array is a sequence of values back to back to back in memory. its just a chunk of memory storing values back to back to back.
 

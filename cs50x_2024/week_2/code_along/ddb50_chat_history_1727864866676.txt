@@ -1,0 +1,39 @@
+user: i wrote " int s = get_int("size of arr: ");
+    int arr[s];
+    arr[0] = 1;" after i got an for " int s = get_int("size of arr: ");
+    int arr[s] = {1};"
+
+can you explain why this happened to me
+
+assistant: It looks like you're trying to initialize an array with a dynamic size. In C, you can't use dynamic arrays with an initializer list like `{1}`. Instead, you need to initialize the elements individually after declaring the array.
+
+Your first approach:
+```c
+int s = get_int("size of arr: ");
+int arr[s];
+arr[0] = 1;
+```
+is correct for setting the first element to 1. 
+
+Can you show me the exact error message you received?
+
+user: doubling.c:7:13: error: variable-sized object may not be initialized
+    7 |     int arr[s] ={1};
+      |             ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 errors generated.
+make: *** [<builtin>: doubling] Error 1
+
+assistant: The error message indicates that you cannot initialize a variable-sized array with an initializer list. Instead, you should initialize the elements individually after declaring the array, like this:
+
+```c
+int s = get_int("size of arr: ");
+int arr[s];
+arr[0] = 1;
+```
+
+This way, you avoid the error and correctly set the first element of the array.
+
+user: ok
+
+assistant: Got it! If you have any more questions or need further clarification, feel free to ask.

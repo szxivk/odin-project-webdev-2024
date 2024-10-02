@@ -99,6 +99,14 @@ Note: Header files specify the inputs and outputs of functions, while the actual
 **Note**: `=` is the assignment operator and `==` checks for equality between two values.
 
 ## Functions
+- syntax:
+  ```c
+  return-type func_name(argument-list);
+  ```
+- also known as procedures, methods, and subroutines.
+- argument(s) --> function --> return value(s)
+- used for (better) organization, simplification, and reusability.
+- an prototype of the function can be declared before the main function.  You can then define the fuction after main function -this way the main function remains on the top.
 - See examples in the "code_along" section.
 
 ### Understanding the main function
