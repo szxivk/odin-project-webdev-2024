@@ -10,19 +10,24 @@
 # Arrays
 - syntax
     ```c
+    type name[size];
+    
     int scores[3]; // this is how you define 1 variable to tuck away 3 values in that variable. this line tells the computer, give me (enough room for) an array of size 3 -> declaration
     scores[0] = 72; // means go into this array at location ("index") 0 & put value 72 there -> assignment
     scores[1] = 73;
     scores[2] = 33;
 
-    // or
+    // instantiation syntax
 
     int scores[3] = {72, 73, 33};
     ```
+- arrays are a fundamental data structure.
 - an array is a sequence of values back to back to back in memory. its just a chunk of memory storing values back to back to back.
+- i.e, we use arrays to hold values of the same type at contiguous (meaning: next or together in sequence) memory locations.
+- if an array consists of n elements, the first element is located at index 0`. The last element is located at index `(n-1)`.
+- c is lenient in terms of letting us go "out of bounds", but doing so is sometimes dangerous from the program. be sure to not to overstep the bounds of your arrays.
+- arrays can consist of more than a single dimension. You can have as many size specifiers as you wish `bool battleship[10][10];`.
 
-**NOTE**: its commonplace to capitalize a variable, if its a constant (eg. `const int N;`)
- - read about global vs local variable
  - array as an parameter for a function: 
  ```c
  float avg(int length, int array[]);
@@ -39,6 +44,16 @@
     words[0]="HI!";
     words[1]="BYE!";
     ```
+
+
+- **Somethings to keep in mind**:
+  - while we can treat individual elements of arrays as variables, we cannot treat entire arrays themselves as variables.
+  - we cannot, for instance, assign one array to another using the assignment operator `=`. That is not legal C.
+  - instead, we must use a loop to copy over the elements one at a time.
+- **NOTE**: most variables in C are **passed by values** in function calls.
+  - Arrays do not follow this rule, rather, they are passed by reference. The callee receives the actual array, not a copy of it.
+
+
 # Making Code that take commandline arguements.
 
 - syntax:
@@ -50,7 +65,9 @@
     ```
 
 - argc & argv stands for argument count (how many words did the human type at the prompt) & argument vector (vector is generally another term for an array -> a list of values or in this case, commandline arguments)
-    - check out status.c in code_along folder of week_2
+
+- if command is `./greedy 1024 cs50` then the programs argc = 3. and argv[0] would be equal to "./greedy".
+- - check out status.c in code_along folder of week_2
 
 ## Exit statuses
 

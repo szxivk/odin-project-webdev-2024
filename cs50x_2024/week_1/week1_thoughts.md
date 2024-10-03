@@ -62,6 +62,8 @@ Note: Header files specify the inputs and outputs of functions, while the actual
 
 **Note**: `unsigned` is a qualifer that can be applied to certain types (including `int`). There are other qualifers like `short`, `long`, and `const` etc.
 
+**NOTE**: its commonplace to capitalize a variable, if its a constant (eg. `const int N;`)
+
 ### char
 - Used for storing a single character.
 - Takes 1 byte of memory (8 bits), limiting the range of values.
@@ -118,6 +120,13 @@ int main (void){
 
 ## In-Scope Variables
 - the context in which the variables exists.
+- it is a characteristics of a variable that defines from which functions that variable may be accesses.
+  - local variables: can only be accessed within the functions in which they are created.
+  - global variables: can be accesses by any function in the program.
+- Most variables in C are **passed by values** in function calls, which is a method for passing arguments to functions that copies the value of the argument into the function's local parameter variables.
+  - The original variable passed to the function cannot be modified by the function. 
+  - The changes made to the parameter are only within the scope of the called function. 
+  - The changes do not affect the value of the argument in the calling function.
 
 ## Conditionals
 - `if`, `else if`, and `switch` statements.
