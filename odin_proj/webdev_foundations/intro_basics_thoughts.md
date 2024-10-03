@@ -62,13 +62,4 @@
     -  atomic commit: is a commit that includes changes related to only one feature or task of your program. There are two main reasons for doing this: first, if something you change turns out to cause some problems, it is easy to revert the specific change without losing other changes; and second, it enables you to write better commit message
   - Note for future: need to watch a video on how git works , how it saves files (its 2 stage system)
 
-  ## HTML Foundations
-
-  - HTML and CSS:
-    - HTML is the raw data that a webpage is built out of. All the text, links, cards, lists, and buttons are created in HTML. CSS is what adds style to those plain elements. HTML puts information on a webpage, and CSS positions that information, gives it color, changes the font, and makes it look great!
-    -  they are only concerned with presenting information. They are not used to program any logic. JavaScript is a programming language and it’s used to make webpages do things.
-  - HTML markups are enhanced by CSS and JavaScript, which is why it’s recommended that you learn this programming language first. it allows you as a website owner to create the basic structure of you website
-  - While CSS is a static programming language, it can be used to make your website appear visually pleasing and modern.
-    - Along with the presentation of HTML, CSS can also be used to alter the layout and formatting of your website.
-  - While HTML provides the structure for a website and CSS allows you to control the presentation of a site, the JavaScript programming language gives you the tools that you need to alter the behavior of different elements that are found on a website page.
   
