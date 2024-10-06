@@ -27,7 +27,7 @@
   - how accessible they are to users who rely on assistive technologies, like screen readers, to use the internet.
 - Using the correct elements for content is called **semantic HTML**.
 
-### Void Elements
+#### Void Elements
 
 - Some HTML elements do not have a closing tag.
 - like: `<br>` or `<img>`.
@@ -35,7 +35,7 @@
 
 **NOTE**: You might also see these referred to as self-closing tags. But those are just void elements with a forward slash(/) at the end like: `<br /> `or `<img />`, but the latest version of the HTML specification discourages their use and considers them invalid.
 
-### HTML Boilerplate
+#### HTML Boilerplate
 
 - All HTML documents have the same basic structure or boilerplate that needs to be in place before anything useful can be done
 
@@ -61,4 +61,49 @@
 ```
 - The `<head>` element is where we put important meta-information about our webpages, and stuff required for our webpages to render correctly in the browser. Inside the `<head>`, we should not use any element that displays content on the webpage.
 -  The `<body>` element is where all the content that will be displayed to users will go - the text, images, lists, links, and so on.
+
+#### Paragraphs
+
+-  A paragraph element is defined by wrapping text content with a `<p>` tag.
+-  If we want to create paragraphs in HTML, we need to use the paragraph element, which will add a new line after each of our paragraphs.
+-  Otherwise when the browser encounters new lines in your HTML, it will compress them down into one single space (**only first space counts**). The result of this compression is that all of the text is clumped together into one long line.
+
+#### Headings
+
+- There are 6 different levels of headings starting from `<h1>` to `<h6>`
+- Headings are defined much like paragraphs. For example, to create an h1 heading, we wrap our heading text in an `<h1>` tag.
+
+#### Strong Element
+
+- The `<strong>` element makes text bold. It also semantically marks text as important; this affects tools, like screen readers, that users with visual impairments will rely on to use your website.
+- To define a strong element, we wrap text content in a `<strong>` tag.
+  ```html
+  <body>
+    <p>Lorem ipsum <strong>dolor sit</strong> amet, consectetur adipiscing elit.</p>
+  </body>
+  ```
+
+#### Em Element
+
+- The `<em>` element makes text italic. It also semantically places emphasis on the text, which again may affect things like screen readers. To define an emphasised element, wrap the text content in an `<em>`tag.
+
+#### Nesting and indentation
+
+- When we **nest** elements within other elements, we create a parent and child relationship between them. The nested elements are the children and the element they are nested within is the parent.
+- In the following example, the body element is the parent and the paragraphs are the child:
+  ```html
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Ut enim ad minim veniam.</p>
+  </body>
+ </html>
+  ```
+-  HTML parent elements can have many children. Elements at the same level of nesting are considered to be siblings.
+-  We use **indentation** to make the level of nesting clear and readable for ourselves and other developers who will work with our HTML in the future.
 -  
+**REMEMBER**: In order to write an HTML comment, we just enclose the comment with `<!-- and -->` tags. and the vscode shortcut in Windows and Linux Usersis: Ctrl + /
+
+
