@@ -106,4 +106,20 @@
 -  
 **REMEMBER**: In order to write an HTML comment, we just enclose the comment with `<!-- and -->` tags. and the vscode shortcut in Windows and Linux Usersis: Ctrl + /
 
+#### Lists
+
+- Unordered lists:  created using the `<ul>` element, and each item within the list is created using the list item element `<li>`.
+  - Each list item in an unordered list begins with a bullet point.
+- Ordered lists: created using the <ol> element. Each individual item in them is again created using the list item element <li>. 
+  - However, each list item in an ordered list begins with a number instead.
+
+#### Links and Images
+
+- Links are one of the key features of HTML. They allow us to link to other HTML pages on the web. In fact, this is why it’s called **the web**.
+- To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping the text or another HTML element we want to be a link with an <a> tag.
+- But, we need to add an href (hypertext reference) attribute to the opening anchor tag. The value of the href attribute is the destination we want our link to go to.
+  ```html
+  <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+  ```
+**NOTE**: you can use anchor tags to link to any kind of resource on the internet, not just other HTML documents. You can link to videos, pdf files, images, and so on, but for the most part, you will be linking to other HTML documents.
 
