@@ -110,16 +110,46 @@
 
 - Unordered lists:  created using the `<ul>` element, and each item within the list is created using the list item element `<li>`.
   - Each list item in an unordered list begins with a bullet point.
-- Ordered lists: created using the <ol> element. Each individual item in them is again created using the list item element <li>. 
+- Ordered lists: created using the `<ol>` element. Each individual item in them is again created using the list item element `<li>`. 
   - However, each list item in an ordered list begins with a number instead.
 
-#### Links and Images
+#### Links
 
 - Links are one of the key features of HTML. They allow us to link to other HTML pages on the web. In fact, this is why it’s called **the web**.
-- To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping the text or another HTML element we want to be a link with an <a> tag.
+- To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping the text or another HTML element we want to be a link with an `<a>` tag.
 - But, we need to add an href (hypertext reference) attribute to the opening anchor tag. The value of the href attribute is the destination we want our link to go to.
   ```html
   <a href="https://www.theodinproject.com/about">About The Odin Project</a>
   ```
-**NOTE**: you can use anchor tags to link to any kind of resource on the internet, not just other HTML documents. You can link to videos, pdf files, images, and so on, but for the most part, you will be linking to other HTML documents.
+**NOTE**: you can use anchor tags to link to any kind of resource on the internet, not just other HTML documents. You can link to videos, pdf files, images, and so on,
+but for the most part, you will be linking to other HTML documents.
+
+- Below is how you code safer links which open in a new tab:
+```html
+<a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+```
+
+- The `target` attribute: While `href` specifies the destination link, target specifies where the linked resource will be opened.
+If it is not present, then, by default, it will take on the `_self` value which opens the link in the current tab.
+To open the link in a new tab or window (depends on browser settings) you can set it to `_blank`.
+
+- The `rel` attribute: is used to describe the relation between the current page and the linked document.
+
+- The `noopener` and `noreferrer` values are ways to protect the page you're coming from and make the interaction between pages safer.
+  - these are used to:
+    1. Prevent security risks (by stopping the new page from messing with the original page).
+    2. Enhance privacy (by hiding the source page from the new page).
+
+-  It is recommended to always pair a `target="_blank"` with a `rel="noopener noreferrer"`.
+
+
+- Links to pages on other websites on the internet are called **absolute links**.
+  - made up of the following parts: `protocol://domain/path`
+
+- Links to other pages within our own website are called **relative links**.
+  - Relative links only include the file path to the other page, relative to the page you are creating the link on (see example in code_along/odin-links-and-images).
+
+#### Images
+
+- 
 
