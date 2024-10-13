@@ -118,6 +118,7 @@
 - Links are one of the key features of HTML. They allow us to link to other HTML pages on the web. In fact, this is why it’s called **the web**.
 - To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping the text or another HTML element we want to be a link with an `<a>` tag.
 - But, we need to add an href (hypertext reference) attribute to the opening anchor tag. The value of the href attribute is the destination we want our link to go to.
+**NOTE**: An HTML attribute gives additional information to an HTML element and always goes in the element’s opening tag. 
   ```html
   <a href="https://www.theodinproject.com/about">About The Odin Project</a>
   ```
@@ -151,5 +152,11 @@ To open the link in a new tab or window (depends on browser settings) you can se
 
 #### Images
 
-- 
-
+- To display an image in HTML we use the `<img>` element. Unlike the other elements we have encountered, the `<img>` element is a void element.
+As we have seen earlier in the course, void elements do not need a closing tag because they are naturally empty and do not contain any content.
+- Instead of wrapping content with an opening and closing tag, it embeds an image into the page using a `src` attribute which tells the browser where the image file is located. The `src` attribute works much like the `href` attribute for anchor tags. It can embed an image using both *absolute* and *relative* paths.
+- Besides the `src` attribute, every image element must also have an `alt` (alternative text) attribute.
+- The `alt` attribute is used to describe an image. It will be used in place of the image if it cannot be loaded. It is also used with screen readers to describe what the image is to visually impaired users.
+- Specifying `height` and `width` attributes in image tags helps the browser layout the page without causing the page to jump and flash.
+**NOTE**: It is a good habit to always specify these attributes on every image, even when the image is the correct size or you are using CSS to modify it.
+- check examples in odin-proj/webdev-foundations/code-along/odin-links-and-images
