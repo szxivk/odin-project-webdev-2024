@@ -92,9 +92,9 @@
 - When we **nest** elements within other elements, we create a parent and child relationship between them. The nested elements are the children and the element they are nested within is the parent.
 - In the following example, the body element is the parent and the paragraphs are the child:
   ```html
-<html>
-  <head>
-  </head>
+  <html>
+    <head>
+    </head>
   <body>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>Ut enim ad minim veniam.</p>
@@ -137,7 +137,7 @@ To open the link in a new tab or window (depends on browser settings) you can se
 - The `rel` attribute: is used to describe the relation between the current page and the linked document.
 
 - The `noopener` and `noreferrer` values are ways to protect the page you're coming from and make the interaction between pages safer.
-  - these are used to:
+- These are used to:
     1. Prevent security risks (by stopping the new page from messing with the original page).
     2. Enhance privacy (by hiding the source page from the new page).
 
@@ -158,8 +158,13 @@ As we have seen earlier in the course, void elements do not need a closing tag b
 - Besides the `src` attribute, every image element must also have an `alt` (alternative text) attribute.
 - The `alt` attribute is used to describe an image. It will be used in place of the image if it cannot be loaded. It is also used with screen readers to describe what the image is to visually impaired users.
 - Specifying `height` and `width` attributes in image tags helps the browser layout the page without causing the page to jump and flash.
-**NOTE**: It is a good habit to always specify these attributes on every image, even when the image is the correct size or you are using CSS to modify it.
+
+```html
+<img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="310" width="310">
+```
+**NOTE**: It is a good habit to always specify size attributes on every image, even when the image is the correct size or you are using CSS to modify it.
 - check examples in odin-proj/webdev-foundations/code-along/odin-links-and-images
 
+
 #### Commit messages
-- [an amazing article.](https://cbea.ms/git-commit/)
+- An amazing [article](https://cbea.ms/git-commit/) on best practices for writing a git commit message.
