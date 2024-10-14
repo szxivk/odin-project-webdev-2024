@@ -160,3 +160,6 @@ As we have seen earlier in the course, void elements do not need a closing tag b
 - Specifying `height` and `width` attributes in image tags helps the browser layout the page without causing the page to jump and flash.
 **NOTE**: It is a good habit to always specify these attributes on every image, even when the image is the correct size or you are using CSS to modify it.
 - check examples in odin-proj/webdev-foundations/code-along/odin-links-and-images
+
+#### Commit messages
+- [an amazing article.](https://cbea.ms/git-commit/)
