@@ -89,7 +89,7 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // winner logic -> simple selection sort, highest votes will be first element or 0th index
+    // winner logic -> simple bubble sort, highest votes will be first element or 0th index
     candidate sorted[1];
 
     for (int i = 0; i < candidate_count; i++)
