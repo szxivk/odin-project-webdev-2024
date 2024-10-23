@@ -32,12 +32,13 @@
 - Ω(1) - denotes algo takes finite/fixed number of steps in the best case
 
 
-#### Most common notations.
+#### Most common notations (from fastest to slowest)
 
-- *O*(1) | Ω(1) ---> Constant
-- *O*(*log*(N)) | Ω(*log*(N)) ---> Logarithmic
-- *O*(N) | Ω(N) ---> Linear
-- *O*(N2) | Ω(N2) --> Quadratic
+1. *O*(1) ---> Constant ---> The time is constant regardless of input size.
+2. *O*(*log*(N)) ---> Logarithmic ---> Grows slowly with input size; common in divide-and-conquer algorithms like binary search.
+3. *O*(N) | Ω(N) ---> Linear ---> Grows directly proportional to the input size; common in simple loops.
+4. *O*(N*log*(N)) ---> Log-linear ---> Grows faster than linear but still efficient; common in efficient sorting algorithms like merge sort and quicksort.
+5. *O*(N2) | Ω(N2) ---> Quadratic ---> Grows rapidly; common in nested loops and brute-force algorithms.
 
 ## Sorting Algorithms
 
@@ -54,3 +55,29 @@
 E.g. Θ(N*log*(N)) can be used for merge sort to show its time Complexity.
 
 # Structs
+
+- Allows us to create our own data structures (It just means storing things back to back to back contiguously in memory), our own types of variables.
+- a Structure can be a variable that contains any number of other variables.
+- syntax:
+```c
+typedef struct
+{
+    string name;
+    string number;
+} person; //this will create a new datatype in c called person
+
+//declared using
+person people[3];
+
+//then it can be initialized using syntax
+people[0].name = "sz";
+people[0].number = "+91-6006754323";
+```
+
+**NOTE**: In above example, if we only initialize only one value, the other value becomes a garbage value -which is a bad practice.
+
+# Recursion
+
+- It is a description for a *function that calls itself*.
+- watched till 1:33:00
+
