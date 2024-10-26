@@ -233,3 +233,73 @@ img {
 ```
 **NOTE**: It’s best to include both of these properties and the HTML attributes for image elements, even if you don’t plan on adjusting the values from the image file’s original ones. Reason for it is -When these values aren’t included, if an image takes longer to load than the rest of the page contents, it won’t take up any space on the page at first but will suddenly cause a drastic shift of the other page contents once it does load in. Explicitly stating a `height` and `width` prevents this from happening, as space will be “*reserved*” on the page and appear blank until the image loads.
 
+## Adding CSS to HTML
+
+#### External CSS
+  External CSS is the most common method you will come across, and it involves creating a separate file for the CSS and linking it inside of an HTML’s opening and closing `<head>` tags with a void `<link>` element:
+
+Syntax:
+
+```html
+<!-- index.html -->
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+```css
+/* styles.css */
+
+div {
+  color: white;
+  background-color: black;
+}
+
+p {
+  color: red;
+}
+```
+The `href` attribute is the location of the CSS file, either an absolute URL or, what you’ll be utilizing, a URL relative to the location of the HTML file. In our example above, we are assuming both files are located in the same directory. The `rel` attribute is required, and it specifies the relationship between the HTML file and the linked file.
+
+**Pros of using external CSS:**
+
+- It keeps our HTML and CSS separated, which results in the HTML file being smaller and making things look cleaner.
+- We only need to edit the CSS in one place, which is especially handy for websites with many pages that all share similar styles.
+
+#### Internal CSS
+  Internal CSS (or embedded CSS) involves adding the CSS within the HTML file itself instead of creating a completely separate file. With the internal method, you place all the rules inside of a pair of opening and closing `<style>` tags, which are then placed inside of the opening and closing `<head>` tags of your HTML file.
+
+Syntax:
+
+```html
+<!-- index.html -->
+
+<head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  ...
+</body>
+```
+
+#### Inline CSS
+  Inline CSS makes it possible to add styles directly to HTML elements, though this method isn’t as recommended:
+
+Syntax:
+
+```html
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
+```
+
+**NOTE**: Any inline CSS will override the other two methods, which can cause unexpected results. (While we won’t dive into it here, this can actually be taken advantage of.)
