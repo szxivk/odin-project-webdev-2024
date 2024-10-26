@@ -179,7 +179,7 @@ works for chaining any combination of selectors, except for chaining more than o
 
 ## Properties (some of them)
 
-1. **Color and background-color**
+### **Color and background-color**
     
 - The `color` property sets an element’s text color, while `background-color` sets the background color of an element. 
 - Both of these properties can accept one of several kinds of values. A common one is a keyword, such as an actual color name like `red` or the `transparent` keyword.
@@ -201,4 +201,35 @@ p {
   color: hsl(15, 82%, 56%);
 }
 ```
+
+### **Typography and text-align**
+
+1. font-family
+- `font-family` can be a single value or a comma-separated list of values that determine what font an element uses.
+- Each font will fall into one of two categories, either a “font family name” like `"Times New Roman"` (we use quotes due to the whitespace between words) or a “generic family name” like `serif` (generic family names never use quotes).
+- it’s best practice to include a list of values for this property, starting with the font you want to be used most and ending with a generic font family as a fallback.
+- e.g. `font-family: "Times New Roman", serif;`
+
+2. font-size
+- will set the size of the font. When giving a value to this property, the value should not contain any whitespace.
+- e.g. `font-size: 22px;` has no space between “22” and “px”.
+
+3. font-weight
+- affects the boldness of text, assuming the font supports the specified weight.
+- This value can be a keyword, e.g. `font-weight: bold;`, or a number between 1 and 1000, e.g. `font-weight: 700;` (the equivalent of bold)
+
+4. text-align
+- It will align text horizontally within an element, and you can use the common keywords you may have come across in word processors as the value for this property, e.g. `text-align: center;`
+
+### Image height and width
+
+**NOTE**: By default, an `<img>` element’s `height` and `width` values will be the same as *the actual image file’s height and width*.
+-  If you wanted to adjust the size of the image without causing it to lose its proportions, you would use a value of `auto` for the height property and adjust the width value, syntax would look like:
+```css
+img {
+  height: auto;
+  width: 500px;
+}
+```
+**NOTE**: It’s best to include both of these properties and the HTML attributes for image elements, even if you don’t plan on adjusting the values from the image file’s original ones. Reason for it is -When these values aren’t included, if an image takes longer to load than the rest of the page contents, it won’t take up any space on the page at first but will suddenly cause a drastic shift of the other page contents once it does load in. Explicitly stating a `height` and `width` prevents this from happening, as space will be “*reserved*” on the page and appear blank until the image loads.
 
