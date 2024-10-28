@@ -34,11 +34,11 @@
 
 #### Most common notations (from fastest to slowest)
 
-1. *O*(1) ---> Constant ---> The time is constant regardless of input size.
-2. *O*(*log*(N)) ---> Logarithmic ---> Grows slowly with input size; common in divide-and-conquer algorithms like binary search.
-3. *O*(N) | Ω(N) ---> Linear ---> Grows directly proportional to the input size; common in simple loops.
-4. *O*(N*log*(N)) ---> Log-linear ---> Grows faster than linear but still efficient; common in efficient sorting algorithms like merge sort and quicksort.
-5. *O*(N2) | Ω(N2) ---> Quadratic ---> Grows rapidly; common in nested loops and brute-force algorithms.
+1. ***O*(1)** → Constant → The time is constant regardless of input size.
+2. ***O*(*log*(N))** → Logarithmic → Grows slowly with input size; common in divide-and-conquer algorithms like binary search.
+3. ***O*(N)** → Linear → Grows directly proportional to the input size; common in simple loops.
+4. **O(N*log*(N))** → Log-linear → Grows faster than linear but still efficient; common in efficient sorting algorithms like merge sort and quicksort.
+5. ***O*(N2)** → Quadratic → Grows rapidly; common in nested loops and brute-force algorithms.
 
 ## Sorting Algorithms
 
@@ -51,17 +51,18 @@
 
 **NOTE**: Although Merge Sort is a better/faster algorithm than the other two, Bubble Sort is a better option than Merge Sort when we need to check whether a given array is sorted or not in some cases.
 
-- In the above table, for Selection Sort and merge sort, Θ notation can be used to indicate that they performs the same for both their worst and best case. 
+In the above table, for Selection Sort and merge sort, Θ notation can be used to indicate that they performs the same for both their worst and best case. 
 E.g. Θ(N*log*(N)) can be used for merge sort to show its time Complexity.
 
 # Structs
 
-- Allows us to create our own data structures (It just means storing things back to back to back contiguously in memory), our own types of variables.
-- a Structure can be a variable that contains any number of other variables.
-- syntax:
+    Allows us to create our own data structures (It just means storing things back to back to back contiguously in memory), our own types of variables.
+- A Structure can be a variable that contains any number of other variables.
+- Syntax:
 ```c
 typedef struct
 {
+    // below are this structure's members
     string name;
     string number;
 } person; //this will create a new datatype in c called person
@@ -78,6 +79,16 @@ people[0].number = "+91-6006754323";
 
 # Recursion
 
-- It is a description for a *function that calls itself*.
-- watched till 1:33:00
+    It's a description of a function that calls itself.
+- Using it usually doesn't make programs more efficient or faster. They are just an elegant way of solving problems.
+
+### Call Stack
+    The call stack is a fundamental concept in programming, especially in languages like C and C++, where it helps manage function calls and execution order. Think of it as a stack of books—every time a function is called, it gets "placed" on top of the stack. When a function finishes, it "pops off" the stack, allowing the program to return to the previous function.
+Why its important?
+
+1. Keeps track of function calls (When you call a function, it’s added to the stack, and its position there helps the program remember where it left off)
+2. Manages memory (Once a function completes, all its local data is removed from memory, helping optimize memory usage)
+3. Tracks program flow (for easier debugging)
+
+- re-watched till 1:33:00
 
