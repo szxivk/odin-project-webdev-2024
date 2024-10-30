@@ -303,3 +303,71 @@ Syntax:
 ```
 
 **NOTE**: Any inline CSS will override the other two methods, which can cause unexpected results. (While we won’t dive into it here, this can actually be taken advantage of.)
+
+
+## The cascade of CSS
+
+    The cascade is what determines which rules actually get applied to our HTML. There are different factors that the cascade uses to determine this.
+
+**NOTE**: This topic needs a-lot of examples to understand -click this [link](https://www.theodinproject.com/lessons/foundations-the-cascade#the-cascade-of-css) to recall.
+
+We will examine three of these factors:
+
+1. **Specificity**
+
+- A CSS declaration that is more specific will take precedence over less specific ones.
+- Inline styles, have the highest specificity compared to selectors.
+- An ID selector will always beat any number of class selectors, a class selector will always beat any number of type selectors, and a type selector will always beat any number of less specific selectors.
+- A rule with a greater number of selectors of the same type will take precedence over another rule with fewer selectors of the same type.
+- When comparing selectors, you may come across special symbols for the universal selector (`*`) as well as combinators (`+`, `~`, `>`, and an empty space). These symbols do not add any specificity in and of themselves.
+
+2. **Inheritance**
+
+- It refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if we don’t explicitly write a rule for those descendants.
+
+- The exception to this is when directly targeting an element, as this always beats inheritance
+
+Syntax: 
+
+```html
+<!-- index.html -->
+
+<div id="parent">
+  <div class="child"></div>
+</div>
+```
+
+```css
+/* styles.css */
+
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+```
+Despite the `parent` element having a higher specificity with an `ID`, the `child` element would have the `color: blue` style applied since that declaration directly targets it, while `color: red` from the `parent` is only inherited.
+
+3. **Rule order**
+
+- After every other factor has been taken into account, When there are still multiple conflicting rules targeting an element. **Whichever rule was the last defined is the winner**.
+
+Syntax:
+
+```css
+/* styles.css */
+
+.alert {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
+```
+For an element that has both the `alert` and `warning` classes, the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other). Since the `.warning` rule was the last one defined, and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element.
+
+
+
