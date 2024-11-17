@@ -370,4 +370,27 @@ Syntax:
 For an element that has both the `alert` and `warning` classes, the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other). Since the `.warning` rule was the last one defined, and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element.
 
 
+## Inspecting HTML and CSS
+
+    Being able to inspect and debug your HTML and CSS is critical for frontend development.
+
+### Using The inspector for Inspecting elements
+
+To open up the inspector, you can right-click on any element of a webpage and click “Inspect” or press `F12`.
+
+**NOTE**: The `Ctrl + Shift + C` shortcut opens the Elements panel in inspector mode. This mode shows you helpful tooltips when you hover over elements on a page. You can also click any element to view its CSS in the Elements > Styles tab.
+
+Use this [link](https://developer.chrome.com/docs/devtools/overview/) to recall about different Chrome DevTools and how to use them.
+
+### DOM vs. HTML
+    The browser parses the HTML and creates a tree of objects, that tree model to represent HTML is known as Document Object Model (or DOM).
+
+*"DOM" usually means the current state the HTML page is in*. So if you, for example, have a HTML page and add a tag with javascript.
+
+The actual HTML of the page is still the same, but the "DOM" however will be changed.
+
+Use this [link](https://developer.chrome.com/docs/devtools/dom/) to learn how to edit DOM in elements tab in the Inspector.
+
+
+
 
