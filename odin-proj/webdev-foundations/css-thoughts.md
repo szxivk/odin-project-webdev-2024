@@ -391,6 +391,28 @@ The actual HTML of the page is still the same, but the "DOM" however will be cha
 
 Use this [link](https://developer.chrome.com/docs/devtools/dom/) to learn how to edit DOM in elements tab in the Inspector.
 
+## The Box Model
+    The most important skills you need to master with CSS are positioning and layout, being able to put things exactly where you want them on a webpage is more crucial.
 
+Every single thing on a webpage is a rectangular box. These boxes can have other boxes in them and can sit alongside one another. You can get a rough idea of how this works by applying an outline to every element on the page like this:
 
+```css
+* {
+  outline : 2px solid red;
+}
+```
 
+In the end, laying out a webpage and positioning all its elements is deciding how you are going to nest and stack these boxes.
+
+The only real complication here is that there are many ways to manipulate the size of these boxes, and the space between them, using `padding`, `border`, and `margin`. The assigned articles go into more depth on this concept, but to sum it up briefly:
+
+1. `padding`: increases the space between the border of a box and the content of the box.
+2. `border`: adds space (even if it’s only a pixel or two) between the margin and the padding.
+3. `margin`: increases the space between the borders of a box and the borders of adjacent boxes.
+
+### Block and inline boxes
+In CSS we have several types of boxes that generally fit into the categories of block boxes and inline boxes. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an inner display type and an outer display type.
+
+In general, you can set various values for the display type using the `display` property, which can have various values.
+
+Use this [link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) to recall everything about The Box Model and display property
