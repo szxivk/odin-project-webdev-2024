@@ -410,9 +410,34 @@ The only real complication here is that there are many ways to manipulate the si
 2. `border`: adds space (even if it’s only a pixel or two) between the margin and the padding.
 3. `margin`: increases the space between the borders of a box and the borders of adjacent boxes.
 
-### Block and inline boxes
+**NOTE**: If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as *margin collapsing*.
+
+## Block and inline boxes
 In CSS we have several types of boxes that generally fit into the categories of block boxes and inline boxes. The type refers to how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes have an inner display type and an outer display type.
 
 In general, you can set various values for the display type using the `display` property, which can have various values.
+
+```css
+display : block; /* By default, block elements will appear on the page stacked atop each other, each new element starting on a new line. */
+
+/* or */
+
+display : inline; /* Inline elements, however, do not start on a new line. They appear in line with whatever elements they are placed beside. */
+
+/* or */
+
+display : inline-block; /* Inline-block elements behave like inline elements, but with block-style padding and margin. */
+```
+**NOTE**: Padding and Margin behave differently on inline elements.
+
+### Divs and spans
+    They are just generic boxes that can contain anything that serve no other purpose than to be “hook” elements.
+
+We can give an `id` or `class` to target them for styling with CSS. Another use case is grouping related elements under one parent element to correctly position them on the page. **Divs** and **spans** provide us with the ability to do this.
+
+`Div` is a block-level element by default. It is commonly used as a container element to group other elements. Divs allow us to divide the page into different blocks and apply styling to those blocks.
+
+`Span` is an inline-level element by default. It can be used to group text content and inline HTML elements for styling and should only be used when no other semantic HTML element is appropriate.
+
 
 Use this [link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) to recall everything about The Box Model and display property
