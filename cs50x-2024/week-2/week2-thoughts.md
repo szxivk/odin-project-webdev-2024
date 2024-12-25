@@ -1,10 +1,10 @@
-# taking a look underneath the hood of a compiler
+# Taking a look underneath the hood of a compiler
 
 - source code --> preprocessing --> compiling --> assembling --> linking -> machine code
-    - preprocssing does a bit of find and replace (involves the preprocessing lines which start with `#`).
-    - compiling: after above step compiles sourcecode to assembling language.
+    - preprocessing does a bit of find and replace (involves the preprocessing lines which start with `#`).
+    - compiling: after above step compiles source-code to assembling language.
     - assembling: takes assembly code and converts it to 0s & 1s.
-    - linking: combiles all files involved in our project and links them all together (eg. our `hello.c` file included `cs50.c` and `stdio.c` files --> `.h` are header files & they include basically prototypes (not the whole functions) of functions written in their resp. `.c` files)
+    - linking: combines all files involved in our project and links them all together (eg. our `hello.c` file included `cs50.c` and `stdio.c` files --> `.h` are header files & they include basically prototypes (not the whole functions) of functions written in their resp. `.c` files)
     - The `make` command we use actually runs something called `clang` command (which requires use to use arguments n options to run as we what it to run). `Make` abstracts it all away from us.
     - computer's memory (Random access memory) is kinda this canvas that you can manipulate the bits on to store numbers anywhere you want in it. a canvas of bytes.
 # Arrays
@@ -34,7 +34,7 @@
  ```
  - string is just an array of characters and can be manipulated like an array.
     - but how do we set its size?
-        - at the end of a string eg `string s = "HI!"`, if `s[2] = '!'`, there is hidden `s[3]` value , a sentinal value at the end which is automatically set to `00000000` -> single byte 0 or 8 0 bit (technically a char-based representation of a 0 -> `\0` or known as `NUL`), which tells the computer the string stops here.
+        - at the end of a string eg `string s = "HI!"`, if `s[2] = '!'`, there is hidden `s[3]` value , a sentinel value at the end which is automatically set to `00000000` -> single byte 0 or 8 0 bit (technically a char-based representation of a 0 -> `\0` or known as `NUL`), which tells the computer the string stops here.
         - 8 0 bits is NUL in ASCII
     - therefore, a string is n+1 bytes , n being number of characters in the string. 1 extra byte for the zero value.
 - string can also be stored in arrays and they act like 2D arrays (meaning you can even access the characters inside the strings inside the array). 
@@ -54,7 +54,7 @@
   - Arrays do not follow this rule, rather, they are passed by reference. The callee receives the actual array, not a copy of it.
 
 
-# Making Code that take commandline arguements.
+# Making Code that take commandline arguments.
 
 - syntax:
     ```c
@@ -76,4 +76,4 @@
 # Cryptography
 
 - encryption: scrambling info so that only you and the recipient can receive it
-    - plaintext + key --> cipher (encrypting algorithm) --> ciphertext
+    - plaintext + key --> cipher (encrypting algorithm) --> cipher-text

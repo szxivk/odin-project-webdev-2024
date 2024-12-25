@@ -144,4 +144,4 @@ int main (void){
 
 ## Command line
 - some linux shell commands include `ls`, `cd`, `mkdir`, `rm`, `mv`, `cp`, and `rmdir` etc.
-- [Cheatsheet](https://phoenixnap.com/kb/linux-commands-cheat-sheet).
+- Checkout this [Cheatsheet](https://phoenixnap.com/kb/linux-commands-cheat-sheet) for linux commands.
