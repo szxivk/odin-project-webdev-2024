@@ -441,3 +441,6 @@ We can give an `id` or `class` to target them for styling with CSS. Another use 
 
 
 Use this [link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) to recall everything about The Box Model and display property
+
+
+**NOTE**: From Flexbox onwards no notes/thoughts.md files will be maintained
