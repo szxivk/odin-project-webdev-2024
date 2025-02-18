@@ -18,3 +18,5 @@ const text = document.createTextNode(
 
 const linkPara = document.querySelector("p");
 linkPara.appendChild(text);
+
+para.setAttribute("class", "highlight");
